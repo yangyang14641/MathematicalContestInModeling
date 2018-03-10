@@ -1,0 +1,1 @@
+imshow([I{squre{1,t}(1)},I{squre{1,t}(2)};I{squre{2,t}(1)},I{squre{2,t}(2)}])

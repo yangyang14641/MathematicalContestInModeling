@@ -1,0 +1,386 @@
+
+     Welcome to Fluent 6.3.26
+
+     Copyright 2006 Fluent Inc.
+     All Rights Reserved
+
+Loading "C:\Fluent.Inc\fluent6.3.26\lib\fl_s1119.dmp"
+Done.
+ 
+
+> Reading "C:\Users\apple\Desktop\default_id190288.cas"...
+  131248 quadrilateral cells, zone  2, binary.
+     208 2D velocity-inlet faces, zone  3, binary.
+     208 2D velocity-inlet faces, zone  4, binary.
+       1 2D pressure-inlet faces, zone  5, binary.
+     630 2D wall faces, zone  6, binary.
+     631 2D pressure-outlet faces, zone  7, binary.
+  261657 2D interior faces, zone  9, binary.
+  132088 nodes, binary.
+  132088 node flags, binary.
+
+Building...
+     grid,
+     materials,
+     interface,
+     domains,
+	mixture
+	air
+	oil
+	seawater
+	interaction
+     zones,
+	water  (air)
+	outlet_w  (air)
+	inlet_w  (air)
+	inlet  (air)
+	wall  (air)
+	out  (air)
+	default-interior  (air)
+	water  (oil)
+	outlet_w  (oil)
+	inlet_w  (oil)
+	inlet  (oil)
+	wall  (oil)
+	out  (oil)
+	default-interior  (oil)
+	water  (seawater)
+	outlet_w  (seawater)
+	inlet_w  (seawater)
+	inlet  (seawater)
+	wall  (seawater)
+	out  (seawater)
+	default-interior  (seawater)
+	default-interior
+	out
+	wall
+	inlet
+	inlet_w
+	outlet_w
+	water
+     shell conduction zones,
+Done.
+
+FLUENT
+Version: 2d, dp, pbns, vof, ske, unsteady (2d, double precision, pressure-based, VOF, standard k-epsilon, unsteady)
+Release: 6.3.26
+Title: 
+
+Models
+------
+
+   Model                        Settings                              
+   ----------------------------------------------------------------
+   Space                        2D                                    
+   Time                         Unsteady, 1st-Order Implicit          
+   Viscous                      Standard k-epsilon turbulence model   
+   Wall Treatment               Standard Wall Functions               
+   Heat Transfer                Disabled                              
+   Solidification and Melting   Disabled                              
+   Species Transport            Disabled                              
+   Coupled Dispersed Phase      Disabled                              
+   Pollutants                   Disabled                              
+   Pollutants                   Disabled                              
+   Soot                         Disabled                              
+
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name               id   type              
+      ---------------------------------------
+      water              2    fluid             
+      outlet_w           3    velocity-inlet    
+      inlet_w            4    velocity-inlet    
+      inlet              5    pressure-inlet    
+      wall               6    wall              
+      out                7    pressure-outlet   
+      default-interior   9    interior          
+
+   Boundary Conditions
+
+      water
+
+         Condition                                              Value             
+         ----------------------------------------------------------------------
+         Material Name                                          fuel-oil-liquid   
+         Specify source terms?                                  no                
+         Source Terms                                           ()                
+         Specify fixed values?                                  no                
+         Fixed Values                                           ()                
+         Motion Type                                            0                 
+         X-Velocity Of Zone (m/s)                               0                 
+         Y-Velocity Of Zone (m/s)                               0                 
+         Rotation speed (rad/s)                                 0                 
+         X-Origin of Rotation-Axis (m)                          0                 
+         Y-Origin of Rotation-Axis (m)                          0                 
+         Deactivated Thread                                     no                
+         Laminar zone?                                          no                
+         Set Turbulent Viscosity to zero within laminar zone?   yes               
+         Porous zone?                                           no                
+         Porosity                                               1                 
+
+      outlet_w
+
+         Condition                             Value           
+         ---------------------------------------------------
+         Velocity Specification Method         2               
+         Reference Frame                       0               
+         Velocity Magnitude (m/s)              -0.1            
+         X-Velocity (m/s)                      0               
+         Y-Velocity (m/s)                      0               
+         X-Component of Flow Direction         1               
+         Y-Component of Flow Direction         0               
+         X-Component of Axis Direction         1               
+         Y-Component of Axis Direction         0               
+         Z-Component of Axis Direction         0               
+         X-Coordinate of Axis Origin (m)       0               
+         Y-Coordinate of Axis Origin (m)       0               
+         Z-Coordinate of Axis Origin (m)       0               
+         Angular velocity (rad/s)              0               
+         Turbulent Specification Method        0               
+         Turbulent Kinetic Energy (m2/s2)      1               
+         Turbulent Dissipation Rate (m2/s3)    1               
+         Turbulent Intensity (%)               0.00099999993   
+         Turbulent Length Scale (m)            1               
+         Hydraulic Diameter (m)                1               
+         Turbulent Viscosity Ratio             10              
+         is zone used in mixing-plane model?   no              
+
+      inlet_w
+
+         Condition                             Value           
+         ---------------------------------------------------
+         Velocity Specification Method         2               
+         Reference Frame                       0               
+         Velocity Magnitude (m/s)              0.1             
+         X-Velocity (m/s)                      0               
+         Y-Velocity (m/s)                      0               
+         X-Component of Flow Direction         1               
+         Y-Component of Flow Direction         0               
+         X-Component of Axis Direction         1               
+         Y-Component of Axis Direction         0               
+         Z-Component of Axis Direction         0               
+         X-Coordinate of Axis Origin (m)       0               
+         Y-Coordinate of Axis Origin (m)       0               
+         Z-Coordinate of Axis Origin (m)       0               
+         Angular velocity (rad/s)              0               
+         Turbulent Specification Method        0               
+         Turbulent Kinetic Energy (m2/s2)      1               
+         Turbulent Dissipation Rate (m2/s3)    1               
+         Turbulent Intensity (%)               0.00099999993   
+         Turbulent Length Scale (m)            1               
+         Hydraulic Diameter (m)                1               
+         Turbulent Viscosity Ratio             10              
+         is zone used in mixing-plane model?   no              
+
+      inlet
+
+         Condition                                    Value           
+         ----------------------------------------------------------
+         Gauge Total Pressure (pascal)                331535          
+         Supersonic/Initial Gauge Pressure (pascal)   0               
+         Direction Specification Method               1               
+         X-Component of Flow Direction                1               
+         Y-Component of Flow Direction                0               
+         X-Component of Axis Direction                1               
+         Y-Component of Axis Direction                0               
+         Z-Component of Axis Direction                0               
+         X-Coordinate of Axis Origin (m)              0               
+         Y-Coordinate of Axis Origin (m)              0               
+         Z-Coordinate of Axis Origin (m)              0               
+         Turbulent Specification Method               0               
+         Turbulent Kinetic Energy (m2/s2)             1               
+         Turbulent Dissipation Rate (m2/s3)           1               
+         Turbulent Intensity (%)                      0.00099999993   
+         Turbulent Length Scale (m)                   1               
+         Hydraulic Diameter (m)                       1               
+         Turbulent Viscosity Ratio                    10              
+         is zone used in mixing-plane model?          no              
+
+      wall
+
+         Condition                                            Value   
+         ----------------------------------------------------------
+         Wall Motion                                          0       
+         Shear Boundary Condition                             0       
+         Define wall motion relative to adjacent cell zone?   yes     
+         Apply a rotational velocity to this wall?            no      
+         Velocity Magnitude (m/s)                             0       
+         X-Component of Wall Translation                      1       
+         Y-Component of Wall Translation                      0       
+         Define wall velocity components?                     no      
+         X-Component of Wall Translation (m/s)                0       
+         Y-Component of Wall Translation (m/s)                0       
+         Wall Roughness Height (m)                            0       
+         Wall Roughness Constant                              0.5     
+         Rotation Speed (rad/s)                               0       
+         X-Position of Rotation-Axis Origin (m)               0       
+         Y-Position of Rotation-Axis Origin (m)               0       
+         X-component of shear stress (pascal)                 0       
+         Y-component of shear stress (pascal)                 0       
+         Specularity Coefficient                              0       
+
+      out
+
+         Condition                                     Value           
+         -----------------------------------------------------------
+         Gauge Pressure (pascal)                       0               
+         Backflow Direction Specification Method       1               
+         X-Component of Flow Direction                 1               
+         Y-Component of Flow Direction                 0               
+         X-Component of Axis Direction                 1               
+         Y-Component of Axis Direction                 0               
+         Z-Component of Axis Direction                 0               
+         X-Coordinate of Axis Origin (m)               0               
+         Y-Coordinate of Axis Origin (m)               0               
+         Z-Coordinate of Axis Origin (m)               0               
+         Turbulent Specification Method                0               
+         Backflow Turbulent Kinetic Energy (m2/s2)     1               
+         Backflow Turbulent Dissipation Rate (m2/s3)   1               
+         Backflow Turbulent Intensity (%)              0.00099999993   
+         Backflow Turbulent Length Scale (m)           1               
+         Backflow Hydraulic Diameter (m)               1               
+         Backflow Turbulent Viscosity Ratio            10              
+         is zone used in mixing-plane model?           no              
+
+      default-interior
+
+         Condition   Value   
+         -----------------
+
+Solver Controls
+---------------
+
+   Equations
+
+      Equation          Solved   
+      ------------------------
+      Flow              yes      
+      Volume Fraction   yes      
+      Turbulence        yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Unsteady Calculation Parameters
+
+                                           
+      ----------------------------------
+      Time Step (s)                   1    
+      Max. Iterations Per Time Step   20   
+
+   Relaxation
+
+      Variable                     Relaxation Factor   
+      ----------------------------------------------
+      Pressure                     0.30000001          
+      Density                      1                   
+      Body Forces                  1                   
+      Momentum                     0.69999999          
+      Turbulent Kinetic Energy     0.80000001          
+      Turbulent Dissipation Rate   0.80000001          
+      Turbulent Viscosity          1                   
+
+   Linear Solver
+
+                                   Solver     Termination   Residual Reduction   
+      Variable                     Type       Criterion     Tolerance            
+      ------------------------------------------------------------------------
+      Pressure                     V-Cycle    0.1                                
+      X-Momentum                   Flexible   0.1           0.7                  
+      Y-Momentum                   Flexible   0.1           0.7                  
+      Turbulent Kinetic Energy     Flexible   0.1           0.7                  
+      Turbulent Dissipation Rate   Flexible   0.1           0.7                  
+
+   Pressure-Velocity Coupling
+
+      Parameter                     Value   
+      -----------------------------------
+      Type                          PISO    
+      Skewness-Neighbour Coupling   yes     
+      Skewness Correction           1       
+      Neighbour Correction          1       
+
+   Discretization Scheme
+
+      Variable                     Scheme               
+      -----------------------------------------------
+      Pressure                     PRESTO!              
+      Momentum                     First Order Upwind   
+      Volume Fraction              Geo-Reconstruct      
+      Turbulent Kinetic Energy     First Order Upwind   
+      Turbulent Dissipation Rate   First Order Upwind   
+
+   Solution Limits
+
+      Quantity                         Limit    
+      ---------------------------------------
+      Minimum Absolute Pressure        1        
+      Maximum Absolute Pressure        5e+10    
+      Minimum Temperature              1        
+      Maximum Temperature              5000     
+      Minimum Turb. Kinetic Energy     1e-14    
+      Minimum Turb. Dissipation Rate   1e-20    
+      Maximum Turb. Viscosity Ratio    100000   
+
+Material Properties
+-------------------
+
+   Material: fuel-oil-liquid (fluid)
+
+      Property                        Units      Method     Value(s)   
+      --------------------------------------------------------------
+      Density                         kg/m3      constant   960        
+      Cp (Specific Heat)              j/kg-k     constant   1880       
+      Thermal Conductivity            w/m-k      constant   0.12       
+      Viscosity                       kg/m-s     constant   0.048      
+      Molecular Weight                kg/kgmol   constant   258.19     
+      L-J Characteristic Length       angstrom   constant   0          
+      L-J Energy Parameter            k          constant   0          
+      Thermal Expansion Coefficient   1/k        constant   0          
+      Degrees of Freedom                         constant   0          
+      Speed of Sound                  m/s        none       #f         
+
+   Material: water-liquid (fluid)
+
+      Property                        Units      Method     Value(s)   
+      --------------------------------------------------------------
+      Density                         kg/m3      constant   1025       
+      Cp (Specific Heat)              j/kg-k     constant   4182       
+      Thermal Conductivity            w/m-k      constant   0.6        
+      Viscosity                       kg/m-s     constant   0.001003   
+      Molecular Weight                kg/kgmol   constant   18.0152    
+      L-J Characteristic Length       angstrom   constant   0          
+      L-J Energy Parameter            k          constant   0          
+      Thermal Expansion Coefficient   1/k        constant   0          
+      Degrees of Freedom                         constant   0          
+      Speed of Sound                  m/s        none       #f         
+
+   Material: air (fluid)
+
+      Property                        Units      Method     Value(s)        
+      -------------------------------------------------------------------
+      Density                         kg/m3      constant   1.225           
+      Cp (Specific Heat)              j/kg-k     constant   1006.43         
+      Thermal Conductivity            w/m-k      constant   0.0242          
+      Viscosity                       kg/m-s     constant   1.7894001e-05   
+      Molecular Weight                kg/kgmol   constant   28.966          
+      L-J Characteristic Length       angstrom   constant   3.711           
+      L-J Energy Parameter            k          constant   78.6            
+      Thermal Expansion Coefficient   1/k        constant   0               
+      Degrees of Freedom                         constant   0               
+      Speed of Sound                  m/s        none       #f              
+
+   Material: aluminum (solid)
+
+      Property               Units    Method     Value(s)   
+      ---------------------------------------------------
+      Density                kg/m3    constant   2719       
+      Cp (Specific Heat)     j/kg-k   constant   871        
+      Thermal Conductivity   w/m-k    constant   202.4      
+
